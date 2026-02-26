@@ -1,0 +1,17 @@
+{
+  "name": "rsvp-reader",
+  "version": "1.0.0",
+  "description": "Rapid Serial Visual Presentation demo",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "render-video": "node render-video.js"
+  },
+  "dependencies": {
+    "electron": "^33.0.0"
+  },
+  "devDependencies": {
+    "@napi-rs/canvas": "^0.1.53",
+    "ffmpeg-static": "^5.2.0"
+  }
+}

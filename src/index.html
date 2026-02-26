@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rapid Serial Visual Presentation</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+
+    <!-- ═══ UPPER PANEL: Input ═══ -->
+    <div class="panel panel-input">
+
+      <textarea id="textInput" spellcheck="false" placeholder="Enter your text here…"></textarea>
+
+      <div class="controls-bar">
+        <div class="wpm-control" id="wpmControl">
+          <button class="wpm-btn" id="wpmDown" tabindex="-1">−</button>
+          <input type="number" id="wpmInput" value="360" min="60" max="1200" step="10" title="Words per minute">
+          <span class="wpm-label">WPM</span>
+          <button class="wpm-btn" id="wpmUp" tabindex="-1">+</button>
+        </div>
+        <div class="mode-toggle">
+          <button class="mode-btn is-active" id="btnModeFixed" title="Constant speed">Fixed</button>
+          <button class="mode-btn"           id="btnModeRamp"  title="300 → 400 → 600 WPM">Ramp</button>
+        </div>
+        <div class="ctrl-divider"></div>
+        <div class="transport">
+          <button class="ctrl-btn" id="btnRewind"  title="Rewind 10 words  [←]">⏮</button>
+          <button class="ctrl-btn ctrl-play" id="btnPlay" title="Play / Pause  [Space]">▶</button>
+          <button class="ctrl-btn" id="btnStop"    title="Stop &amp; reset  [Escape]">⏹</button>
+          <button class="ctrl-btn" id="btnForward" title="Forward 10 words  [→]">⏭</button>
+        </div>
+        <div class="progress-info">
+          <span id="wordCounter">Word — / —</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ═══ LOWER PANEL: RSVP Display ═══ -->
+    <div class="panel panel-display">
+
+      <!-- current speed indicator -->
+      <div class="speed-badge" id="speedBadge">360 WPM</div>
+
+      <!-- top pivot tick -->
+      <div class="pivot pivot-top" id="pivotTop"></div>
+
+      <div class="word-row">
+        <span class="word-left"  id="wordLeft"></span>
+        <span class="word-orp"   id="wordOrp">●</span>
+        <span class="word-right" id="wordRight"></span>
+      </div>
+
+      <!-- bottom pivot tick -->
+      <div class="pivot pivot-bottom" id="pivotBottom"></div>
+
+      <div class="hint" id="hint">Enter text above and press ▶ to start</div>
+
+      <!-- time seekbar -->
+      <div class="seekbar-wrap">
+        <div class="seekbar-track" id="seekbarTrack">
+          <div class="seekbar-fill"  id="seekbarFill"></div>
+          <div class="seekbar-thumb" id="seekbarThumb"></div>
+        </div>
+        <span class="seekbar-time" id="seekbarTime">0 sec of 0 sec</span>
+      </div>
+
+    </div>
+
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
