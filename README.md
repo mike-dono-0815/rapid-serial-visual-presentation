@@ -1,8 +1,10 @@
 # Rapid Serial Visual Presentation
 
-A desktop speed-reading trainer built with [Electron](https://www.electronjs.org/).
+A browser-based speed-reading trainer.
 Words are displayed one at a time at a fixed point on screen — your eyes never move, only the text does.
 The **orange letter** in each word marks the *Optimal Recognition Point (ORP)*, the character your brain anchors on to instantly decode the word.
+
+**Live app: [mike-dono-0815.github.io/rapid-serial-visual-presentation](https://mike-dono-0815.github.io/rapid-serial-visual-presentation/)**
 
 ---
 
@@ -18,35 +20,6 @@ The **orange letter** in each word marks the *Optimal Recognition Point (ORP)*, 
 | **Transport controls** | Play/Pause · Stop · Rewind −10 words · Forward +10 words |
 | **Keyboard shortcuts** | `Space` play/pause · `←` / `→` rewind/forward · `Esc` stop |
 | **Text input** | Paste or type any text; special characters are stripped automatically on paste |
-
----
-
-## Requirements
-
-- **Node.js** v18 or later — download from <https://nodejs.org>
-  *(includes npm, no other tools needed)*
-
-The app runs on **Windows**, **macOS**, and **Linux**.
-
----
-
-## Quick start
-
-```bash
-# 1. Clone or download this repository
-git clone https://github.com/mike-dono-0815/rsvp-reader.git
-cd rsvp-reader
-
-# 2. Install dependencies (only needed once)
-npm install
-
-# 3. Launch the app
-npm start
-```
-
-### Windows shortcut
-
-Double-click **`start.vbs`** in the project folder — it opens the app without a terminal window.
 
 ---
 
@@ -72,15 +45,11 @@ Double-click **`start.vbs`** in the project folder — it opens the app without 
 
 ```
 rsvp-reader/
-├── main.js          Electron main process
-├── package.json
-├── start.vbs        Windows one-click launcher
-└── src/
-    ├── index.html
-    ├── css/
-    │   └── style.css
-    └── js/
-        └── app.js
+├── index.html
+├── css/
+│   └── style.css
+└── js/
+    └── app.js
 ```
 
 ---
